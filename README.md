@@ -12,7 +12,6 @@ An end-to-end machine learning web app that predicts HDB resale flat prices in S
 
 ## Project Structure
 
-- `data/` — raw and cleaned datasets
 - `notebooks/` — EDA and model experiments
 - `pipeline/fetch.py` — pulls data from data.gov.sg API
 - `pipeline/clean.py` — cleans and transforms raw data
