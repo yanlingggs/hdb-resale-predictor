@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Add to bottom of .gitignore
+.env
+data/
+venv/
