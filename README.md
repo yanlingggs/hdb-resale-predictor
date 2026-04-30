@@ -11,14 +11,13 @@ An end-to-end machine learning web app that predicts HDB resale flat prices in S
 - **Deployment**: AWS (coming in Week 7)
 
 ## Project Structure
-hdb-resale-predictor/
-├── data/              # raw and cleaned datasets
-├── notebooks/         # EDA and model experiments
-├── pipeline/
-│   ├── fetch.py       # pulls data from data.gov.sg API
-│   ├── clean.py       # cleans and transforms raw data
-│   └── load.py        # loads cleaned data into SQLite
-└── run_pipeline.py    # runs the full pipeline
+
+- `data/` — raw and cleaned datasets
+- `notebooks/` — EDA and model experiments
+- `pipeline/fetch.py` — pulls data from data.gov.sg API
+- `pipeline/clean.py` — cleans and transforms raw data
+- `pipeline/load.py` — loads cleaned data into SQLite
+- `run_pipeline.py` — runs the full pipeline
 
 ## How to Run
 ```bash
