@@ -14,7 +14,8 @@ def fetch_hdb_data():
     resp = requests.get(BASE_URL, params={
         "resource_id": DATASET_ID,
         "limit": 10000,
-        "offset": 0
+        "offset": 0,
+        "sort": "month desc"
     }, headers=headers)
     result = resp.json()
     if "result" in result:
@@ -22,6 +23,7 @@ def fetch_hdb_data():
         df = pd.DataFrame(records)
         df.to_csv("data/raw_hdb.csv", index=False)
         print(f"Done! Total rows: {len(df)}")
+        print(f"Date range: {df['month'].min()} to {df['month'].max()}")
         return df
     else:
         raise Exception(f"API error: {result}")
