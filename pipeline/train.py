@@ -25,7 +25,7 @@ def train():
     r2_lr = r2_score(y_test, y_pred_lr)
     print(f"Linear Regression RMSE: ${rmse_lr:,.0f} | R²: {r2_lr:.4f}")
 
-    xgb_model = XGBRegressor(n_estimators=100, random_state=42)
+    xgb_model = XGBRegressor(n_estimators=300, max_depth=5, learning_rate=0.2, random_state=42)
     xgb_model.fit(X_train, y_train)
     y_pred_xgb = xgb_model.predict(X_test)
     rmse_xgb = np.sqrt(mean_squared_error(y_test, y_pred_xgb))
