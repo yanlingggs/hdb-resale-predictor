@@ -4,11 +4,14 @@ An end-to-end machine learning web app that predicts HDB resale flat prices in S
 
 ## Live Demo
 - Frontend: https://hdb-resale-frontend.onrender.com
-- API: https://hdb-resale-api.onrender.com
+- API Health: https://hdb-resale-api.onrender.com/health
+
+## Preview
+![HDB Resale Price Predictor](assets/demo.png)
 
 ## Model Performance
 - Algorithm: XGBoost
-- R²: 0.95
+- R2: 0.95
 - RMSE: $46,987
 - Training data: 10,000 HDB transactions (Dec 2025 - Apr 2026)
 
@@ -34,6 +37,3 @@ An end-to-end machine learning web app that predicts HDB resale flat prices in S
 ## How to Run
 pip install -r requirements.txt
 python run_pipeline.py
-
-## Backlog
-See BACKLOG.md
