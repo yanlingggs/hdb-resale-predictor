@@ -35,5 +35,7 @@ An end-to-end machine learning web app that predicts HDB resale flat prices in S
 - run_pipeline.py — runs the full pipeline
 
 ## How to Run
+```bash
 pip install -r requirements.txt
 python run_pipeline.py
+```
