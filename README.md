@@ -2,37 +2,38 @@
 
 An end-to-end machine learning web app that predicts HDB resale flat prices in Singapore using public data from data.gov.sg.
 
+## Live Demo
+- Frontend: https://hdb-resale-frontend.onrender.com
+- API: https://hdb-resale-api.onrender.com
+
+## Model Performance
+- Algorithm: XGBoost
+- R²: 0.95
+- RMSE: $46,987
+- Training data: 10,000 HDB transactions (Dec 2025 - Apr 2026)
+
 ## Tech Stack
-- **Data**: data.gov.sg public API
-- **Processing**: Python, Pandas
-- **Storage**: SQLite
-- **ML**: Scikit-learn, XGBoost (coming in Week 3)
-- **Frontend**: React (coming in Week 5)
-- **Deployment**: AWS (coming in Week 7)
+- Data: data.gov.sg public API
+- Processing: Python, Pandas
+- Storage: PostgreSQL
+- ML: Scikit-learn, XGBoost
+- Backend: Flask
+- Frontend: React
+- Deployment: Render
 
 ## Project Structure
-
-- `notebooks/` — EDA and model experiments
-- `pipeline/fetch.py` — pulls data from data.gov.sg API
-- `pipeline/clean.py` — cleans and transforms raw data
-- `pipeline/load.py` — loads cleaned data into SQLite
-- `run_pipeline.py` — runs the full pipeline
+- pipeline/fetch.py — pulls data from data.gov.sg API
+- pipeline/clean.py — cleans and transforms raw data
+- pipeline/load.py — loads cleaned data into PostgreSQL
+- pipeline/train.py — trains and saves XGBoost model
+- api/app.py — Flask API serving predictions
+- frontend/ — React web app
+- notebooks/ — EDA and model experiments
+- run_pipeline.py — runs the full pipeline
 
 ## How to Run
-```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Run the full pipeline
 python run_pipeline.py
-```
 
-## Progress
-- [x] Week 1 — Data pipeline
-- [ ] Week 2 — Data exploration
-- [ ] Week 3 — ML model
-- [ ] Week 4 — Model refinement
-- [ ] Week 5 — React frontend
-- [ ] Week 6 — Frontend polish
-- [ ] Week 7 — Deployment
-- [ ] Week 8 — Final polish
+## Backlog
+See BACKLOG.md
